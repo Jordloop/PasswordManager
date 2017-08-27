@@ -9,5 +9,17 @@ namespace PasswordManager.Models
         {
 
         }
+
+        public DbSet<Site> Sites { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=PasswordManager;integrated security=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }

@@ -36,17 +36,23 @@
                         @using (Html.BeginForm("LogOff", "Account"))
                         {
                             <li>
-                                <input type="submit" class="btn btn-default" value="Log out" />
+                                @*<input type="submit" class="btn btn-default" value="Log out" />*@
                             </li>
                         }
+                        <li>
+                            @Html.ActionLink("Create new", "Create", "Site")
+                        </li>
+                        <li>
+                            @Html.ActionLink(@User.Identity.Name, "Index", "Account")
+                        </li>
                     }
                     else
                     {
                         <li>
-                            @Html.ActionLink("Log in", "Login") 
+                            @Html.ActionLink("Log in", "Login", "Account") 
                         </li>
                         <li>
-                            @Html.ActionLink("Register", "Register")
+                            @Html.ActionLink("Register", "Register", "Account")
                         </li>
                     }
                 </ul>
@@ -55,8 +61,10 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+
         <hr />
         <footer>
+
             <p>&copy; 2017 - PasswordManager</p>
         </footer>
     </div>

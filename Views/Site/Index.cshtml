@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<PasswordManager.Models.Site>
+
+<h2>Where would you like to go @User.Identity.Name?</h2>
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var Site in Model)
+        {
+            <li>@Html.DisplayFor(modelItem => Site.Id)</li>
+            <li>@Html.DisplayFor(modelItem => Site.Name)</li>
+            <li>@Html.DisplayFor(modelItem => Site.Url)</li>
+            <li>@Html.DisplayFor(modelItem => Site.UserName)</li>
+            <li>@Html.DisplayFor(modelItem => Site.Email)</li>
+            <li>@Html.DisplayFor(modelItem => Site.User)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No sites have been added yet!</p>
+}
+
+@Html.ActionLink("Create new", "Create")

@@ -217,10 +217,14 @@ C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Program.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Startup.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Controllers\AccountController.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Controllers\HomeController.cs
+C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Controllers\SiteController.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Migrations\20170827010740_Initial.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Migrations\20170827010740_Initial.Designer.cs
+C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Migrations\20170827034000_AddSiteTable.cs
+C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Migrations\20170827034000_AddSiteTable.Designer.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Models\ApplicationDbContext.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Models\ApplicationUser.cs
+C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\Models\Site.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\ViewModels\LoginViewModel.cs
 C:\Users\jordl\Desktop\Portfolio\PasswordManager\src\PasswordManager\ViewModels\RegisterViewModel.cs
