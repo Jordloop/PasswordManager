@@ -13,12 +13,12 @@
     <ul>
         @foreach (var Site in Model)
         {
-            <li>@Html.DisplayFor(modelItem => Site.Id)</li>
-            <li>@Html.DisplayFor(modelItem => Site.Name)</li>
-            <li>@Html.DisplayFor(modelItem => Site.Url)</li>
-            <li>@Html.DisplayFor(modelItem => Site.UserName)</li>
-            <li>@Html.DisplayFor(modelItem => Site.Email)</li>
-            <li>@Html.DisplayFor(modelItem => Site.User)</li>
+            <li>Id: @Html.DisplayFor(modelItem => Site.Id)</li>
+            <li>Name: @Html.DisplayFor(modelItem => Site.Name)</li>
+            <li>URL: @Html.DisplayFor(modelItem => Site.Url)</li>
+            <li>UserName: @Html.DisplayFor(modelItem => Site.UserName)</li>
+            <li>Email: @Html.DisplayFor(modelItem => Site.Email)</li>
+            <li>User: @Html.DisplayFor(modelItem => Site.User.UserName)</li>
         }
     </ul>
 }
