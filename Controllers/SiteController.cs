@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using PasswordManager.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace PasswordManager.Controllers
 {
@@ -40,6 +41,34 @@ namespace PasswordManager.Controllers
                 var currentUser = await _userManager.FindByIdAsync(userId);
                 site.User = currentUser;
                 _db.Sites.Add(site);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+//Edit
+            public IActionResult Edit(int id)
+            {
+                var thisSite= _db.Sites.FirstOrDefault(sites => sites.Id == id);
+                return View(thisSite);
+            }
+            [HttpPost]
+            public IActionResult Edit(Site site)
+            {
+                _db.Entry(site).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+//Delete
+            public IActionResult Delete(int id)
+            {
+                var thisSite = _db.Sites.FirstOrDefault(sites => sites.Id == id);
+                return View(thisSite);
+            }
+
+            [HttpPost, ActionName("Delete")]
+            public IActionResult DeleteConfirmed(int id)
+            {
+                var thisItem = _db.Sites.FirstOrDefault(sites => sites.Id == id);
+                _db.Sites.Remove(thisItem);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
