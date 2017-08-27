@@ -56,17 +56,11 @@ namespace PasswordManager.Controllers
             return RedirectToAction("Index");
         }
 //Delete
-        public IActionResult Delete(int id)
-        {
-            var thisSite = _db.Sites.FirstOrDefault(sites => sites.Id == id);
-            return View(thisSite);
-        }
-
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisItem = _db.Sites.FirstOrDefault(sites => sites.Id == id);
-            _db.Sites.Remove(thisItem);
+            var thisSite= _db.Sites.FirstOrDefault(sites => sites.Id == id);
+            _db.Sites.Remove(thisSite);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

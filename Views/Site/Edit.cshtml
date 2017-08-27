@@ -25,6 +25,11 @@
     @Html.LabelFor(model => model.Email)
     @Html.EditorFor(model => model.Email)
 
-    <input type="submit" value="Save" />
+    <input class="btn btn-default" type="submit" value="Save" />
+}
+
+@using (Html.BeginForm())
+{
+    <input class="btn btn-danger" type="submit" value="Delete" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>

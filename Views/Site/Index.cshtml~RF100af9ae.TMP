@@ -5,7 +5,7 @@
 
 @model IEnumerable<PasswordManager.Models.Site>
 
-<h2>Where would you like to go?</h2>
+<h2>Where would you like to go @User.Identity.Name?</h2>
 <hr />
 
 @if (Model.Any())
@@ -14,11 +14,9 @@
             <div class="row">
             @foreach (var Site in Model)
             {
-//Only will render Site info if Site has a sute Url property
-                @if(Site.Url != null)
-                {
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail">
+                            <img src="..." alt="...">
                             <div class="caption">
                                 <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
                                 <p>@Html.DisplayFor(modelItem => Site.UserName)</p>
@@ -27,8 +25,6 @@
                             </div>
                         </div>
                     </div>
-                }
-
             }
             </div>
 
