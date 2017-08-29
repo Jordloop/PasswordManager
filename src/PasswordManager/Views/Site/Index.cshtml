@@ -5,37 +5,43 @@
 
 @model IEnumerable<PasswordManager.Models.Site>
 
-<h2>Where would you like to go?</h2>
-<hr />
 
-@if (Model.Any())
-{
-    <div class="container">
-            <div class="row">
-            @foreach (var Site in Model)
-            {
-//Only will render Site info if Site has a sute Url property
-                @if(Site.Url != null)
+
+<div class="main-content">
+
+    <h2>Where would you like to go?</h2>
+    <hr />
+
+    @if (Model.Any())
+    {
+        <div class="container sites">
+                <div class="row">
+                @foreach (var Site in Model)
                 {
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
-                                <p>@Html.DisplayFor(modelItem => Site.UserName)</p>
-                                <p>@Html.DisplayFor(modelItem => Site.Email)</p>
-                                <p><a href="@Html.DisplayFor(modelItem => Site.Url)" class="btn btn-primary" role="button">GO!</a> <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a></p>
+    //Only will render Site info if Site has a sute Url property
+                    @if(Site.Url != null)
+                    {
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
+                                    <p>@Html.DisplayFor(modelItem => Site.UserName)</p>
+                                    <p>@Html.DisplayFor(modelItem => Site.Email)</p>
+                                    <p><a href="@Html.DisplayFor(modelItem => Site.Url)" class="btn btn-primary" role="button">GO!</a> <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
+
                 }
+                </div>
 
-            }
-            </div>
+        </div>}
+    else
+    {
+        <p>No sites have been added yet!</p>
+    }
 
-    </div>}
-else
-{
-    <p>No sites have been added yet!</p>
-}
+    @Html.ActionLink("Create new", "Create")
 
-@Html.ActionLink("Create new", "Create")
+</div>

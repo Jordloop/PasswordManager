@@ -35,7 +35,7 @@ namespace PasswordManager.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             else
             {
@@ -54,7 +54,7 @@ namespace PasswordManager.Controllers
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Site");
             }
             else
             {
@@ -68,5 +68,6 @@ namespace PasswordManager.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
+
     }
 }
