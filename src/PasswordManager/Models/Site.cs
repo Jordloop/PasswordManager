@@ -21,8 +21,22 @@ namespace PasswordManager.Models
 
         public static string GeneratePassword()
         {            
-            string pass = "Test";
-            return pass;
+            char[] upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            char[] lower = "abcdefghijklmnopqustuvqxyz".ToCharArray();
+            char[] number = "0123456789".ToCharArray();
+            char[] symbol = " !#$%&()*+,-./:;<=?@[]^_`{|}~".ToCharArray();
+            string result = "";
+            Random rng = new Random();
+
+            for (int i = 0; i < 4; i++)
+            {
+                result += upper[rng.Next(0, 25)].ToString();
+                result += lower[rng.Next(0, 25)].ToString();
+                result += number[rng.Next(0, 9)].ToString();
+                result += symbol[rng.Next(0, 19)].ToString();
+            }
+
+            return result;
         }
     }
  }
