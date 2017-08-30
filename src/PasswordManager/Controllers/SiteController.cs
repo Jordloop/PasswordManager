@@ -23,6 +23,7 @@ namespace PasswordManager.Controllers
 //Index - Returns all of authenticated user's Site objects
         public async Task<IActionResult> Index()
         {
+            ViewBag.SiteIndex = true;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             return View(_db.Sites.Where(x => x.User.Id == currentUser.Id));

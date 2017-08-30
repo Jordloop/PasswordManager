@@ -58,9 +58,19 @@
     </div>
     <div class="navbar navbar-left">
         <div class="nav-content">
-            <h2>Navigation</h2>
+            <h3>@Html.ActionLink("Passwords", "Index", "Site")</h3>
+            @if (ViewBag.SiteIndex == true)
+            {
+                <h4>@Html.ActionLink("Create Password", "Create", "Site")</h4>
+                    <h4 class="editSite">Edit Passwords</h4>
+            }
 
-            <h3>@Html.ActionLink("Add Site", "Create", "Site")</h3>
+            <h3>@Html.ActionLink("APIs", "Index", "Api")</h3>
+             @if(ViewBag.ApiIndex == true)
+             {
+                 <h4>@Html.ActionLink("Create API", "Create", "Api")</h4>
+                 <h4 class="editApi">Edit Passwords</h4>
+             }
         </div>   
     </div>
     <div class="container body-content">

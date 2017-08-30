@@ -32,12 +32,6 @@ textarea {
     border-radius: unset;
 }
 
-nav-content {
-    height: 80%;
-    width: 80%;
-    background-color: red;
-}
-
 .navbar-left {
     text-align: center;
     height: 100%;

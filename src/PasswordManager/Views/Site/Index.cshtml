@@ -8,6 +8,13 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $(".siteEdit").hide();
+        $(".editSite").click(function () {
+            console.log("edit");
+            $(".siteEdit").show();
+
+        })
+
         $('.edit').click(function () {
             clicked = $(this)[0].id;
             clicked = parseInt(clicked);
@@ -45,10 +52,8 @@
                             <div class="thumbnail">
                                 <div class="caption">
                                     <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
-                                    <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a>
+                                    <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default siteEdit" role="button">Edit</a>
                                     <button class="btn btn-primary" id="@Site.Url"onclick="copyToClipboard('#pass-@Site.Id', this.id)">GO!</button>
-
-                                    <p id="@Site.Id" class="edit">. . .</p>
 
                                     @*Hidden Properties*@
                                     <p class="hide" id="pass-@Site.Id">@Site.Password</p>
