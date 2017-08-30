@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model PasswordManager.Models.Api
+<div class="form-page well">
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this Site: @Html.DisplayFor(model => model.Name)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Name)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Key)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Key)
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Link)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Link)
+            </div>
+        </div>
+        <input class="btn btn-default" type="submit" value="Save" />
+    }
+
+    @using (Html.BeginForm())
+    {
+        <input class="btn btn-danger" type="submit" value="Delete" />
+    }
+
+</div>
