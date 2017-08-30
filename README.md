@@ -13,6 +13,7 @@
 * Ajax Partial View when clicking "Edit" button.
 * Ajax Partial View when clicking "Add New" button.
 * Style forms
+* Style Site/Index
 
 #### Done
 * User can create an account

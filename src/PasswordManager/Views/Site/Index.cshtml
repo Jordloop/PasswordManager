@@ -10,7 +10,7 @@
 <div class="main-content">
 
     <h2>Where would you like to go?</h2>
-    <hr />
+    <br /><br />
 
     @if (Model.Any())
     {
@@ -28,6 +28,9 @@
                                     <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a>
                                     <button class="btn btn-primary" id="@Site.Url"onclick="copyToClipboard('#pass-@Site.Id', this.id)">GO!</button>
 
+                                    <p id="edit-@Site.Id">. . .</p>
+
+                                    @*Hidden Properties*@
                                     <p class="hide" id="pass-@Site.Id">@Site.Password</p>
                                     <p class="hide" id="url-@Site.Id">@Site.Url</p>
                                 </div>
