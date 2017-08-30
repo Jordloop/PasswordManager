@@ -220,6 +220,8 @@
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170827034000_AddSiteTable.Designer.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170829234603_AddPasswordProperty.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170829234603_AddPasswordProperty.Designer.cs"
+"C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170830221551_AddApisTable.cs"
+"C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170830221551_AddApisTable.Designer.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\Api.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\ApplicationDbContext.cs"
