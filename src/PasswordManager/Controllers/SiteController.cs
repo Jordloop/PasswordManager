@@ -38,6 +38,7 @@ namespace PasswordManager.Controllers
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             site.User = currentUser;
+            site.Password = Site.GeneratePassword();
             _db.Sites.Add(site);
             _db.SaveChanges();
             return RedirectToAction("Index");

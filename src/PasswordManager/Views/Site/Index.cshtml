@@ -27,6 +27,7 @@
                                     <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
                                     <p>@Html.DisplayFor(modelItem => Site.UserName)</p>
                                     <p>@Html.DisplayFor(modelItem => Site.Email)</p>
+                                    <p>Password: @Html.DisplayFor(modelItem => Site.Password)</p>
                                     <p><a href="@Html.DisplayFor(modelItem => Site.Url)" class="btn btn-primary" role="button">GO!</a> <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a></p>
                                 </div>
                             </div>
@@ -41,7 +42,5 @@
     {
         <p>No sites have been added yet!</p>
     }
-
-    @Html.ActionLink("Create new", "Create")
 
 </div>

@@ -39,6 +39,7 @@ textarea {
     width: 20%;
     color: whitesmoke;
     vertical-align: middle;
+    position: fixed;
 }
 
 .main-content {
