@@ -221,6 +221,7 @@
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170829234603_AddPasswordProperty.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\20170829234603_AddPasswordProperty.Designer.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Migrations\ApplicationDbContextModelSnapshot.cs"
+"C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\Api.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\ApplicationDbContext.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\ApplicationUser.cs"
 "C:\Users\epicodus\Desktop\PasswordManager\src\PasswordManager\Models\Site.cs"
