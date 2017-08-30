@@ -5,4 +5,7 @@
     document.execCommand("copy");
     $temp.remove();
     window.location.href = url;
-}     
+}
+
+
+

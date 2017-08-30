@@ -6,6 +6,26 @@
 @model IEnumerable<PasswordManager.Models.Site>
 
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.edit').click(function () {
+            clicked = $(this)[0].id;
+            clicked = parseInt(clicked);
+            console.log(clicked);
+
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                data: { id: clicked },
+                url: '@Url.Action("Edit", "Site")',
+                success: function (result) {
+                    $(".result").html(result);
+                }
+            });
+        });
+    });
+</script>
+
 
 <div class="main-content">
 
@@ -28,7 +48,7 @@
                                     <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default" role="button">Edit</a>
                                     <button class="btn btn-primary" id="@Site.Url"onclick="copyToClipboard('#pass-@Site.Id', this.id)">GO!</button>
 
-                                    <p id="edit-@Site.Id">. . .</p>
+                                    <p id="@Site.Id" class="edit">. . .</p>
 
                                     @*Hidden Properties*@
                                     <p class="hide" id="pass-@Site.Id">@Site.Password</p>
@@ -48,5 +68,5 @@
         <p>No sites have been added yet!</p>
         <h3>@Html.ActionLink("Add Site", "Create", "Site")</h3>
     }
-
+    <div class="result"></div>
 </div>
