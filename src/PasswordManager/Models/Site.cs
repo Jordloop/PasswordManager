@@ -18,7 +18,7 @@ namespace PasswordManager.Models
         public string Password { get; set; }
         public virtual ApplicationUser User { get; set; }
 
-
+        //Generates a "random" password
         public static string GeneratePassword()
         {            
             char[] upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();

@@ -10,10 +10,9 @@
 ## Specs
 
 #### To Do
-* Click on Site object: Redirected to Site's URL property.
-* When new Site object is generated, it includes a random Password property.
-* Click on Site object: Site object's Password property is copied to clipboard.
-* 
+* Ajax Partial View when clicking "Edit" button.
+* Ajax Partial View when clicking "Add New" button.
+* Style forms
 
 #### Done
 * User can create an account
@@ -21,6 +20,9 @@
 * Authenticated User is able to create a new Site object
 * Authenticated User can delete a Site object
 * Authenticated User can Update an existing object
+* Click on Site object: Redirected to Site's URL property.
+* When new Site object is generated, it includes a random Password property.
+* Click on Site object: Site object's Password property is copied to clipboard.
 
 ## Known Bugs
 
