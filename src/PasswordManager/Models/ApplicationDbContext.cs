@@ -11,6 +11,7 @@ namespace PasswordManager.Models
         }
 
         public DbSet<Site> Sites { get; set; }
+        public DbSet<Api> Apis{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

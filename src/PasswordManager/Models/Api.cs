@@ -14,6 +14,7 @@ namespace PasswordManager.Models
         public string Name { get;set; }
         public string Key { get;set; }
         public string Link { get;set; }
+        public virtual ApplicationUser User { get; set; }
 
     }
 }
