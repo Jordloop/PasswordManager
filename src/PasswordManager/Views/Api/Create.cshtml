@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model PasswordManager.Models.Api
+<div class="form-page well">
+    <h2>Add a new Api!</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Key)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Key)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Link)
+            <div class="col-10">
+                @Html.EditorFor(model => model.Link)
+            </div>
+        </div>
+        <input type="submit" value="Create" />
+    }
+    @Html.ActionLink("Back to List", "Index", "Api")
+</div>
