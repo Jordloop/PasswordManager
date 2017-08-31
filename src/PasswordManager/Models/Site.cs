@@ -30,16 +30,16 @@ namespace PasswordManager.Models
 
             for (int i = 0; i < 4; i++)
             {
-                result += upper[rng.Next(0, 25)].ToString();
-                result += lower[rng.Next(0, 25)].ToString();
-                result += number[rng.Next(0, 9)].ToString();
-                result += symbol[rng.Next(0, 19)].ToString();
+                result += upper[rng.Next(0, 27)].ToString();
+                result += lower[rng.Next(0, 27)].ToString();
+                result += number[rng.Next(0, 10)].ToString();
+                result += symbol[rng.Next(0, 30)].ToString();
             }
             result = Shuffle(result);
             return result;
         }
 
-
+        //Randomizes the order of characters in an inputted string
         public static string Shuffle(string str)
         {
             char[] array = str.ToCharArray();
