@@ -52,9 +52,11 @@
                             <div class="thumbnail">
                                 <div class="caption">
                                     <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
-                                    @*JavaScript toggles edit button*@
-                                    <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default siteEdit" role="button">Edit</a>
-                                    <button class="btn btn-primary" id="@Site.Url"onclick="copyPasswordToClipboard('#pass-@Site.Id', this.id)">GO!</button>
+                                    <div class="btn-group">
+                                        @*JavaScript toggles edit button*@
+                                        <button class="btn btn-primary" id="@Site.Url" onclick="copyPasswordToClipboard('#pass-@Site.Id', this.id)">GO!</button>
+                                        <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-success siteEdit" role="button">Edit</a>
+                                    </div>
 
                                     @*Hidden Properties*@
                                     <p class="hide" id="pass-@Site.Id">@Site.Password</p>

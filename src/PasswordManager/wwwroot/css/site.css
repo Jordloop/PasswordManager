@@ -62,7 +62,11 @@ textarea {
     text-align: center;
 }
 
-.btn-danger {
-    text-align: right;
+.btn {
+    border-radius: unset;
+}
 
+
+.thumbnail {
+    background-color: whitesmoke;
 }

@@ -7,12 +7,12 @@
 
 <div class="main-content">
 
-    <h2>The Apis details that are available are as follows:</h2>
+    <h2>Your API keys</h2>
     <br /><br />
 
     @if (Model.Any())
     {
-        <div class="container sites">
+        <div class="container api">
             <div class="row">
                 @foreach (var Api in Model)
                 {
@@ -23,11 +23,13 @@
                             <div class="thumbnail">
                                 <div class="caption">
                                     <h3>@Html.DisplayFor(modelItem => Api.Name)</h3>
-                                    <p>Key: <strong id="key-@Api.Key">@Html.DisplayFor(modelItem => Api.Key)</strong></p>
-                                    @*JavaScript toggles edit button*@
-                                    <a href="/Api/Edit/@Html.DisplayFor(modelItem => Api.Id)" class="btn btn-default apiEdit" role="button">Edit</a>
-                                    <a href="@Html.DisplayFor(modelItem => Api.Link)" class="btn btn-default" role="button">Documentation</a>
-                                    <button class="btn btn-primary" id="@Api.Key" onclick="copyKeyToClipboard('#key-@Api.Key')">Copy</button>
+                                        <p>Key: <strong id="key-@Api.Key">@Html.DisplayFor(modelItem => Api.Key)</strong>  </p>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary" id="@Api.Key" onclick="copyKeyToClipboard('#key-@Api.Key')">Copy</button>
+                                        @*JavaScript toggles edit button*@
+                                        <a href="@Html.DisplayFor(modelItem => Api.Link)" class="btn btn-primary" role="button">View Documentation</a>
+                                        <a href="/Api/Edit/@Html.DisplayFor(modelItem => Api.Id)" class="btn btn-success apiEdit" role="button">Edit</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
