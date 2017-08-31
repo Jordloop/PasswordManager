@@ -40,6 +40,17 @@ textarea {
     color: whitesmoke;
     vertical-align: middle;
     position: fixed;
+    padding-top: 10%;
+}
+
+.navbar-left * {
+    color: grey;
+    margin: 25px;   
+}
+
+.navbar *:hover {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .main-content {
@@ -69,4 +80,9 @@ textarea {
 
 .thumbnail {
     background-color: whitesmoke;
+}
+
+
+a:hover {
+    text-decoration: underline;
 }

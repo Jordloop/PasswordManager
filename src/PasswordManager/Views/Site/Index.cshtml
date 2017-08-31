@@ -5,35 +5,6 @@
 
 @model IEnumerable<PasswordManager.Models.Site>
 
-
-@*<script type="text/javascript">
-    $(document).ready(function () {
-        $(".siteEdit").hide();
-        $(".editSite").click(function () {
-            console.log("edit");
-            $(".siteEdit").show();
-
-        })
-
-        $('.edit').click(function () {
-            clicked = $(this)[0].id;
-            clicked = parseInt(clicked);
-            console.log(clicked);
-
-            $.ajax({
-                type: 'GET',
-                dataType: 'html',
-                data: { id: clicked },
-                url: '@Url.Action("Edit", "Site")',
-                success: function (result) {
-                    $(".result").html(result);
-                }
-            });
-        });
-    });
-</script>*@
-
-
 <div class="main-content">
 
     <h2>Where would you like to go?</h2>

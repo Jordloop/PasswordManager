@@ -58,13 +58,13 @@
     </div>
     <div class="navbar navbar-left">
         <div class="nav-content">
-            <h3>@Html.ActionLink("Passwords", "Index", "Site")</h3>
+            <h3>@Html.ActionLink("Passwords", "Index", "Site", new { @class = "nav-link" })</h3>
             @if (ViewBag.SiteIndex == true)
             {
                 <h4>@Html.ActionLink("Create Password", "Create", "Site")</h4>
                     <h4 class="editSite">Edit Passwords</h4>
             }
-
+            <hr />
             <h3>@Html.ActionLink("APIs", "Index", "Api")</h3>
              @if(ViewBag.ApiIndex == true)
              {
