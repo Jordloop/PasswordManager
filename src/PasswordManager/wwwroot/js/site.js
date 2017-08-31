@@ -1,20 +1,21 @@
 ﻿$(document).ready(function () {
 
-    $(document).ready(function () {
-        $(".siteEdit").hide();
-        $(".apiEdit").hide();
+    $(".siteEdit").hide();
+    $(".apiEdit").hide();
+    $(".hiddenDelete").hide();
 
-        $(".editSite").click(function () {
-            console.log("edit");
-            $(".siteEdit").toggle();
-        })
-    });
+    $(".editSite").click(function () {
+        $(".siteEdit").toggle();
+    })
 
     $(".editApi").click(function () {
-        console.log("edit");
         $(".apiEdit").toggle();
     })
 
+    $(".showDelete").click(function () {
+        console.log("Ding!")
+        $(".hiddenDelete").toggle();
+    })  
 });
 
 function copyPasswordToClipboard(element, url) {

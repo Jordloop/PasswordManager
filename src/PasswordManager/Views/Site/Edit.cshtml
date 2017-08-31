@@ -36,12 +36,19 @@
                 @Html.EditorFor(model => model.Email)
             </div>
         </div>
-        <input class="btn btn-default" type="submit" value="Save" /><br /><br />
+        <div class="btn-group">
+            <input class="btn btn-default" type="submit" value="Save" />
+            <p class="btn btn-danger showDelete">Delete</p>
+        </div><br /><br />
     }
 
-    @using (Html.BeginForm())
-    {
-        <input class="btn btn-danger" type="submit" value="Delete" />
-    }
+        <div class="hiddenDelete">
+            <p>Are you sure? This cannot be undone</p>
 
+            @using (Html.BeginForm())
+            {
+                <input class="btn btn-danger" type="submit" value="Delete" />
+            }
+        </div>
+        
 </div>
