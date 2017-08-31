@@ -22,7 +22,7 @@ namespace PasswordManager.Controllers
             _userManager = userManager;
             _db = db;
         }
-        //Index - Returns all of authenticated user's Site objects
+//Index - Returns all of authenticated user's Site objects
         public async Task<IActionResult> Index()
         {
             ViewBag.ApiIndex = true;
@@ -30,7 +30,7 @@ namespace PasswordManager.Controllers
             var currentUser = await _userManager.FindByIdAsync(userId);
             return View(_db.Apis.Where(x => x.User.Id == currentUser.Id));
         }
-        //Create
+//Create
         public IActionResult Create()
         {
             return View();
@@ -45,7 +45,7 @@ namespace PasswordManager.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-        //Edit
+//Edit
         public IActionResult Edit(int id)
         {
             var thisApi = _db.Apis.FirstOrDefault(api => api.Id == id);
@@ -59,7 +59,7 @@ namespace PasswordManager.Controllers
             return RedirectToAction("Index");
         }
         
-        //Delete
+//Delete
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
