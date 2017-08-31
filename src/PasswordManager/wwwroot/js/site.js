@@ -26,6 +26,7 @@ function copyPasswordToClipboard(element, url) {
     $temp.remove();
     window.location.href = url;
 }
+
 function copyKeyToClipboard(element) {
     var $temp = $("<input>");
     $("body").append($temp);
