@@ -6,7 +6,7 @@
 @model IEnumerable<PasswordManager.Models.Site>
 
 
-<script type="text/javascript">
+@*<script type="text/javascript">
     $(document).ready(function () {
         $(".siteEdit").hide();
         $(".editSite").click(function () {
@@ -31,7 +31,7 @@
             });
         });
     });
-</script>
+</script>*@
 
 
 <div class="main-content">
@@ -52,8 +52,9 @@
                             <div class="thumbnail">
                                 <div class="caption">
                                     <h3>@Html.DisplayFor(modelItem => Site.Name)</h3>
+                                    @*JavaScript toggles edit button*@
                                     <a href="/Site/Edit/@Html.DisplayFor(modelItem => Site.Id)" class="btn btn-default siteEdit" role="button">Edit</a>
-                                    <button class="btn btn-primary" id="@Site.Url"onclick="copyToClipboard('#pass-@Site.Id', this.id)">GO!</button>
+                                    <button class="btn btn-primary" id="@Site.Url"onclick="copyPasswordToClipboard('#pass-@Site.Id', this.id)">GO!</button>
 
                                     @*Hidden Properties*@
                                     <p class="hide" id="pass-@Site.Id">@Site.Password</p>

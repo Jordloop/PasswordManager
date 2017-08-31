@@ -51,7 +51,7 @@ namespace PasswordManager
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             });
 
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
